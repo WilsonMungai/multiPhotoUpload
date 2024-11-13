@@ -7,19 +7,39 @@
       src="https://thunkable.github.io/webviewer-extension/thunkableWebviewerExtension.js"
       type="text/javascript"
     ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   </head>
   <body style="margin: 0px">
     <input id="input" type="file" multiple="multiple" accept="image/jpeg, image/png, image/jpg" style="display: none;"> 
 
-    <button id="thunkableButton" onmousedown="mousedown()" onmouseup="mouseUp()" onclick="document.getElementById('input').click();"
+    <!-- <button id="thunkableButton" onmousedown="mousedown()" onmouseup="mouseUp()" onclick="document.getElementById('input').click();"
       style="color: #FFFFFF; background-color: #5D7AFC; font-size: 16px; width: 311px; height: 49px; border-radius: 15px; text-align: center; line-height: 49px; border-color: transparent" 
-    > Upload </button>
+    > Upload </button> -->
+    <button id="thunkableButton" onmousedown="mousedown()" onmouseup="mouseUp()" onclick="document.getElementById('input').click()"
+      style="
+        color: #FFFFFF; 
+        background-color: #F2C94C; /* Yellow background */
+        font-size: 24px; 
+        width: 80px; 
+        height: 80px; 
+        border-radius: 50%; /* Makes the button circular */
+        text-align: center; 
+        line-height: 80px; 
+        border: none; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center;" 
+    > 
+      <i class="fas fa-camera"></i> <!-- Font Awesome camera icon -->
+    </button>
   </body>
 </html>
 
 <script>
-  document.getElementById("thunkableButton").style.width = window.innerWidth + "px";
-  document.getElementById("thunkableButton").style.height = window.innerHeight + "px";
+//   document.getElementById("thunkableButton").style.width = window.innerWidth + "px";
+//   document.getElementById("thunkableButton").style.height = window.innerHeight + "px";
+  document.getElementById("thunkableButton").style.width = "80px"; // Fixed width
+  document.getElementById("thunkableButton").style.height = "80px"; // Fixed height
 
   function mousedown(){
     document.getElementById("thunkableButton").style.opacity = "0.4";
